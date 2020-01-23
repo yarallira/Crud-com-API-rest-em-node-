@@ -41,31 +41,53 @@ Router.get('/:id', async (req, res) => {
 
         const cliente = await Cliente.findById(id);
 
+        console.log('/:id');     
+
         if (!cliente)
         return res.status(400).send({erro : 'Cliente não encontrado'});
 
         return res.send(cliente);
 
     }catch (erro){
-        return res.status(400).send({erro: "Mão foi possivel consultar o cliente"});
+        return res.status(400).send({erro: "Não foi possivel consultar o cliente"});
     }
 })
 // Consultar pelo nome
-Router.get('/:nome', async (req, res) => {
+Router.post('/cosultaPorNome', async (req, res) => {
+      const { nome } = req.body;
     try{
-        const nome = req.params.nome;
         console.log(nome);
-        const cliente = await Cliente.findOne(nome);
-        console.log(nome);
+
+        const cliente = await Cliente.find( { nome: {$eq: nome} });
+        console.log(cliente);
+      
         if (!cliente)
         return res.status(400).send({erro : "Cliente não encontrado"})
-        console.log(nome);
+
         return res.send(cliente);
 
     }catch (erro){
         return res.status(400).send({erro : "Não foi possível consultar o cliente pelo nome"})
     }
 })
+
+// Router.get('/nome?nome', async (req, res) => {
+//     try{
+//         const nome = req.params.id;
+
+//         const cliente = await Cliente.findById(nome);
+
+//         console.log(cliente);     
+
+//         if (!cliente)
+//         return res.status(400).send({erro : 'Cliente não encontrado'});
+
+//         return res.send(cliente);
+
+//     }catch (erro){
+//         return res.status(400).send({erro: "Não foi possivel consultar o cliente teste"});
+//     }
+// })
 // Atualizar
 Router.put('/:id' , async (req, res) => {
  try{

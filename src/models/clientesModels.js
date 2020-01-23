@@ -3,7 +3,7 @@ const mongoose = require('../database');
 const ClienteSchema = new mongoose.Schema({
     nome: {
         type: String,
-        required: false,
+        required: true,
     },
     rg: {
         type: String,

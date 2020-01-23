@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData .
+8 silly fetchDirectoryPackageData .
+9 silly install normalizeTree
+10 silly loadCurrentTree Finishing
+11 silly loadIdealTree Starting
+12 silly install loadIdealTree
+13 silly cloneCurrentTree Starting
+14 silly install cloneCurrentTreeToIdealTree
+15 silly cloneCurrentTree Finishing
+16 silly loadShrinkwrap Starting
+17 silly install loadShrinkwrap
+18 silly loadShrinkwrap Finishing
+19 silly loadAllDepsIntoIdealTree Starting
+20 silly install loadAllDepsIntoIdealTree
+21 silly resolveWithNewModule Crud-em-node@1.0.0 checking installable status
+22 silly cache add args [ '.', null ]
+23 verbose cache add spec .
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: '.',
+24 silly cache add   scope: null,
+24 silly cache add   name: null,
+24 silly cache add   rawSpec: '.',
+24 silly cache add   spec: '/home/cbykdev/Área de Trabalho/Crud-em-node',
+24 silly cache add   type: 'directory' }
+25 verbose addLocalDirectory /home/cbykdev/.npm/Crud-em-node/1.0.0/package.tgz not in flight; packing
+26 info lifecycle Crud-em-node@1.0.0~prepublish: Crud-em-node@1.0.0
+27 silly lifecycle Crud-em-node@1.0.0~prepublish: no script for prepublish, continuing
+28 verbose tar pack [ '/home/cbykdev/.npm/Crud-em-node/1.0.0/package.tgz',
+28 verbose tar pack   '/home/cbykdev/Área de Trabalho/Crud-em-node' ]
+29 verbose tarball /home/cbykdev/.npm/Crud-em-node/1.0.0/package.tgz
+30 verbose folder /home/cbykdev/Área de Trabalho/Crud-em-node
+31 verbose addLocalTarball adding from inside cache /home/cbykdev/.npm/Crud-em-node/1.0.0/package.tgz
+32 silly cache afterAdd Crud-em-node@1.0.0
+33 verbose afterAdd /home/cbykdev/.npm/Crud-em-node/1.0.0/package/package.json not in flight; writing
+34 verbose afterAdd /home/cbykdev/.npm/Crud-em-node/1.0.0/package/package.json written
+35 silly loadAllDepsIntoIdealTree Finishing
+36 silly idealTree:prePrune lib
+36 silly idealTree:prePrune └── Crud-em-node@1.0.0
+37 silly loadIdealTree Finishing
+38 silly currentTree lib
+39 silly idealTree lib
+39 silly idealTree └── Crud-em-node@1.0.0
+40 silly generateActionsToTake Starting
+41 silly install generateActionsToTake
+42 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+43 silly rollbackFailedOptional Starting
+44 silly rollbackFailedOptional Finishing
+45 silly runTopLevelLifecycles Starting
+46 silly runTopLevelLifecycles Finishing
+47 silly install printInstalled
+48 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+49 verbose cwd /home/cbykdev/Área de Trabalho/Crud-em-node
+50 error Linux 5.3.0-26-generic
+51 error argv "/usr/bin/node" "/usr/bin/npm" "install" "-g"
+52 error node v8.10.0
+53 error npm  v3.5.2
+54 error path /usr/local/lib/node_modules
+55 error code EACCES
+56 error errno -13
+57 error syscall access
+58 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+58 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+58 error   errno: -13,
+58 error   code: 'EACCES',
+58 error   syscall: 'access',
+58 error   path: '/usr/local/lib/node_modules' }
+59 error Please try running this command again as root/Administrator.
+60 verbose exit [ -13, true ]
